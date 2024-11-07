@@ -2,6 +2,7 @@ const express = require('express');
 const axios = require('axios');
 const dotenv = require('dotenv');
 const cors = require('cors');
+const path = require('path');
 
 dotenv.config();
 
@@ -10,6 +11,12 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(cors());
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 const themes = {
     light: {
@@ -102,7 +109,7 @@ const generateSVG = (skills, theme) => {
         return `
             <g>
                 <text x="20" y="${index * 80 + 100}" font-family="Arial" font-size="20" fill="${selectedTheme.text}">${skill.skill}</text>
-                <text x="20" y="${index * 80 + 130}" font-family="Arial" font-size="14" fill="${selectedTheme.text}">Level: ${skill.level} (${levelPercentage}%)</text>
+                <text x="20" y="${index * 80 + 130}" font-family="Arial" font-size="14" fill="${selectedTheme.text}">Level: ${skill.level } (${levelPercentage}%)</text>
                 <rect x="200" y="${index * 80 + 90}" width="180" height="20" fill="${selectedTheme.progressBarBg}" rx="5" ry="5"/>
                 <rect x="200" y="${index * 80 + 90}" width="${levelPercentage * 1.8}" height="20" fill="${selectedTheme.progressBarFill}" rx="5" ry="5" class="progress-bar">
                     <animate attributeName="width" from="0" to="${levelPercentage * 1.8}" dur="1s" fill="freeze"/>
