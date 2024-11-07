@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Skill Matrix - Visualize Your Coding Expertise</title>
+    <meta name="description" content="GitHub Skill Matrix is a tool that analyzes your GitHub repositories and generates a skill matrix. It helps you showcase your programming skills to potential employers, clients, or collaborators.">
+    <meta name="keywords" content="GitHub, Skill Matrix, Coding, Programming, Skills, Expertise">
+    <meta name="author" content="Johndev19">
+    <meta property="og:title" content="GitHub Skill Matrix - Visualize Your Coding Expertise">
+    <meta property="og:description" content="GitHub Skill Matrix is a tool that analyzes your GitHub repositories and generates a skill matrix. It helps you showcase your programming skills to potential employers, clients, or collaborators.">
+    <meta property="og:image" content="https://i.ibb.co/mX7TCzw/about.jpg.jpg"> 
+    <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' fill='currentColor'><path d='M3 22h18v2H3v-2zm2-4h2v-10H5v10zm4 0h2V8H9v10zm4 0h2V4h-2v14zm4 0h2V10h-2v8z'/></svg>" type="image/svg+xml"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>GitHub Skill Matrix</h1>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#skill-matrix">Skill Matrix</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <h2>Visualize Your GitHub Skills</h2>
+                <p>Transform your GitHub repositories into a stunning skill matrix that showcases your programming expertise.</p>
+                <a href="#skill-matrix" class="cta-button">Generate Your Skill Matrix</a>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <h2>About GitHub Skill Matrix</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>GitHub Skill Matrix is a tool that analyzes your GitHub repositories and generates a skill matrix. It helps you showcase your programming skills to potential employers, clients, or collaborators.</p>
+                    <p>It process your repository data to create an accurate representation of your coding expertise across various languages and technologies.</p>
+                </div>
+                <div class="about-image">
+                    <img src="about.jpg" alt="Data Visualization">
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <h2>Our Services</h2>
+            <div class="services-container">
+                <div class="service">
+                    <i class="fas fa-chart-pie service-icon"></i>
+                    <h3>Skill Visualization</h3>
+                    <p>Transform your GitHub data into an eye-catching skill matrix that highlights your strengths.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-palette service-icon"></i>
+                    <h3>Custom Themes</h3>
+                    <p>Choose from a variety of themes to personalize your skill matrix and make it stand out.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-sync-alt service-icon"></i>
+                    <h3>Real-time Updates</h3>
+                    <p>Keep your skill matrix up-to-date with automatic synchronization to your GitHub activity.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-share-alt service-icon"></i>
+                    <h3>Easy Sharing</h3>
+                    <p>Share your skill matrix effortlessly on social media or embed it in your portfolio.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-trophy service-icon"></i>
+                    <h3>Skill Ranking</h3>
+                    <p>See how your skills compare to other developers in your field or region.</p>
+                </div>
+                <div class="service">
+                    <i class="fas fa-history service-icon"></i>
+                    <h3>Progress Tracking</h3>
+                    <p>Monitor your skill development over time with historical data and trends.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="result" id="skill-matrix">
+            <h2>Generate Your Skill Matrix</h2>
+            <div class="result-form">
+                <input type="text" id="username" placeholder="Enter GitHub Username" required>
+                <div class="custom-dropdown">
+                    <select id="theme">
+                        <option value="dark">Dark Theme</option>
+                        <option value="light">Light Theme</option>
+                        <option value="vibrant">Vibrant Theme</option>
+                        <option value="futuristic">Futuristic Theme</option>
+                        <option value="nature">Nature Theme</option>
+                        <option value="cool">Cool Theme</option>
+                        <option value="warm">Warm Theme</option>
+                        <option value="neon">Neon Theme</option>
+                        <option value="minimal">Minimal Theme</option>
+                        <option value="retro">Retro Theme</option>
+                    </select>
+                </div>
+                <button onclick="generateSkillMatrix()">Generate Skill Matrix</button>
+            </div>
+            <div id="result"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>GitHub Skill Matrix is dedicated to helping developers showcase<br> their skills through visualization tools.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#skill-matrix">Skill Matrix</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=61551205372198" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://github.com/JohnDev19/GitHub-Skill-Matrix" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 GitHub Skill Matrix. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <div id="notification" class="notification hidden">
+    <div class="notification-content">
+        <span id="notification-message">Please enter a GitHub username.</span>
+    </div>
+</div>
+</body>
+</html>
