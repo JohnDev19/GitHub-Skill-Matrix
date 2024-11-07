@@ -1,6 +1,6 @@
 # GitHub Skill Matrix API
 
-This API generates a skill matrix in SVG format based on a GitHub user’s repositories. 
+This API generates a skill matrix in SVG format based on a GitHub user’s repositories.
 
 ### Demo
 
@@ -58,25 +58,23 @@ Below are examples of each theme. Click on an image to view it in full size.
 
 ---
 
-## Installation & Setup
+## Contributing
 
-1. Clone the repository.
-2. Install dependencies:
+Contributions are welcome! If you have suggestions for improvements or new features, please fork the repository and submit a pull request. 
 
-   ```bash
-   npm install
-   ```
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push to your branch and create a pull request.
 
-3. Create a `.env` file and add your environment variables:
+---
 
-   ```bash
-   PORT=3000
-   ```
+## Future Improvements
 
-4. Start the server:
-
-   ```bash
-   node index.js
-   ```
+- Add more themes and customization options.
+- Implement user authentication for personalized skill matrices.
+- Enhance error handling and logging.
+- Optimize SVG rendering for performance.
+- Create a frontend interface for easier access to the API.
 
 ---
