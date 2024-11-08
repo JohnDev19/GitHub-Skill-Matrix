@@ -4,7 +4,7 @@ This API generates a skill matrix in SVG format based on a GitHub user's reposit
 
 ## Demo
 
-Below are examples of each theme.
+Below are examples of each theme:
 
 ### Available Themes
 
