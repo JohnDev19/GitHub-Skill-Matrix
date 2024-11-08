@@ -246,18 +246,19 @@ app.get('/api/skills/:username/:theme?', async (req, res) => {
 
         for (const repo of repos) {
             if (repo.language) {
-                if (!skillMatrix[repo.language]) {
-                    skillMatrix[repo.language] = { level: 'Beginner', count: 0 };
+                if (!skillMatrix [repo.language]) {
+                    skillMatrix[repo.language] = { level: 'Beginner', count: 0, size: 0 };
                 }
                 skillMatrix[repo.language].count++;
+                skillMatrix[repo.language].size += repo.size || 0;
             }
         }
 
         for (const language in skillMatrix) {
-            const count = skillMatrix[language].count;
-            if (count > 5) {
+            const { count, size } = skillMatrix[language];
+            if (count > 5 && size > 1000) {
                 skillMatrix[language].level = 'Expert';
-            } else if (count > 2) {
+            } else if (count > 2 && size > 500) {
                 skillMatrix[language].level = 'Intermediate';
             }
         }
