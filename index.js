@@ -99,19 +99,91 @@ const themes = {
         titleBg: '#80deea',
         titleBorder: '#00796b',
     },
+    starrynight: {
+        background: '#001f3f',
+        text: '#ffffff',
+        progressBarBg: '#003366',
+        progressBarFill: '#ffcc00',
+        titleBg: '#001f3f',
+        titleBorder: '#ffcc00',
+    },
+    cyberpunk: {
+        background: '#2b0035',
+        text: '#00ffcc',
+        progressBarBg: '#5e2b4d',
+        progressBarFill: '#ff007f',
+        titleBg: '#2b0035',
+        titleBorder: '#00ffcc',
+    },
+    ocean: {
+        background: '#0077be',
+        text: '#ffffff',
+        progressBarBg: '#005f8c',
+        progressBarFill: '#00bcd4',
+        titleBg: '#0077be',
+        titleBorder: '#00bcd4',
+    },
+    hacker: {
+        background: '#0f0f0f',
+        text: '#00ff00',
+        progressBarBg: '#1a1a1a',
+        progressBarFill: '#00ff00',
+        titleBg: '#0f0f0f',
+        titleBorder: '#00ff00',
+    },
+    twilight: {
+        background: '#4a4e69',
+        text: '#f9f7f7',
+        progressBarBg: '#22223b',
+        progressBarFill: '#9a8c98',
+        titleBg: '#4a4e69',
+        titleBorder: '#9a8c98',
+    },
+    autumn: {
+        background: '#ffcc00',
+        text: '#4a4e69',
+        progressBarBg: '#ffb300',
+        progressBarFill: '#ff6f61',
+        titleBg: '#ffcc00',
+        titleBorder: '#4a4e69',
+    },
+    ice: {
+        background: '#e0f7fa',
+        text: '#004d40',
+        progressBarBg: '#b2ebf2',
+        progressBarFill: '#009688',
+        titleBg: '#e0f7fa',
+        titleBorder: '#004d40',
+    },
+    galaxy: {
+        background: '#1a1a2e',
+        text: '#e94560',
+        progressBarBg: '#16213e',
+        progressBarFill: '#0f3460',
+        titleBg: '#1a1a2e',
+        titleBorder: '#e94560',
+    },
+    monochrome: {
+        background: '#ffffff',
+        text: '#000000',
+        progressBarBg: '#cccccc',
+        progressBarFill: '#000000',
+        titleBg: '#ffffff',
+        titleBorder: '#000000',
+    },
 };
 
 const generateSVG = (skills, theme) => {
     const selectedTheme = themes[theme] || themes.light;
-    
+
     const skillElements = skills.map((skill, index) => {
         const levelPercentage = skill.level === 'Expert' ? 100 : skill.level === 'Intermediate' ? 70 : 30;
         return `
             <g>
-                <text x="20" y="${index * 80 + 100}" font-family="Arial" font-size="20" fill="${selectedTheme.text}">${skill.skill}</text>
-                <text x="20" y="${index * 80 + 130}" font-family="Arial" font-size="14" fill="${selectedTheme.text}">Level: ${skill.level } (${levelPercentage}%)</text>
-                <rect x="200" y="${index * 80 + 90}" width="180" height="20" fill="${selectedTheme.progressBarBg}" rx="5" ry="5"/>
-                <rect x="200" y="${index * 80 + 90}" width="${levelPercentage * 1.8}" height="20" fill="${selectedTheme.progressBarFill}" rx="5" ry="5" class="progress-bar">
+                <text x="20" y="${index * 80 + 100}" font-family="${selectedTheme.fontFamily}" font-size="${selectedTheme.textFontSize}" fill="${selectedTheme.text}">${skill.skill}</text>
+                <text x="20" y="${index * 80 + 130}" font-family="${selectedTheme.fontFamily}" font-size="14" fill="${selectedTheme.text}">Level: ${skill.level} (${levelPercentage}%)</text>
+                <rect x="200" y="${index * 80 + 90}" width="180" height="10" fill="${selectedTheme.progressBarBg}" rx="5" ry="5"/>
+                <rect x="200" y="${index * 80 + 90}" width="${levelPercentage * 1.8}" height="10" fill="${selectedTheme.progressBarFill}" rx="5" ry="5" class="progress-bar">
                     <animate attributeName="width" from="0" to="${levelPercentage * 1.8}" dur="1s" fill="freeze"/>
                 </rect>
             </g>
@@ -128,8 +200,8 @@ const generateSVG = (skills, theme) => {
                 text { animation: fadeIn 1s ease-in; }
             </style>
             <rect width="100%" height="100%" fill="${selectedTheme.background}"/>
-            <rect x="0" y="0" width="400" height="60" fill="${selectedTheme.titleBg}" stroke="${selectedTheme.titleBorder}" stroke-width="2"/>
-            <text x="10" y="40" font-family="Arial" font-size="24" fill="${selectedTheme.text}">Skill Matrix</text>
+            <rect x="0 " y="0" width="400" height="60" fill="${selectedTheme.titleBg}" stroke="${selectedTheme.titleBorder}" stroke-width="2"/>
+            <text x="10" y="40" font-family="${selectedTheme.fontFamily}" font-size="${selectedTheme.titleFontSize}" fill="${selectedTheme.text}">Skill Matrix</text>
             <rect x="0" y="60" width="400" height="10" fill="${selectedTheme.background}"/>
             ${skillElements}
         </svg>
