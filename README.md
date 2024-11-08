@@ -58,6 +58,51 @@ Below are examples of each theme.
     <img src="https://github-skill-matrix.onrender.com/api/skills/JohnDev19/cool" alt="Cool Theme" width="300">
   </a>
 
+- **Starry Night Theme**  
+  <a href="https://github-skill-matrix.onrender.com/api/skills/JohnDev19/starrynight">
+    <img src="https://github-skill-matrix.onrender.com/api/skills/JohnDev19/starrynight" alt="Starry Night Theme" width="300">
+  </a>
+
+- **Cyberpunk Theme**  
+  <a href="https://github-skill-matrix.onrender.com/api/skills/JohnDev19/cyberpunk">
+    <img src="https://github-skill-matrix.onrender.com/api/skills/JohnDev19/cyberpunk" alt="Cyberpunk Theme" width="300">
+  </a>
+
+- **Ocean Theme**  
+  <a href="https://github-skill-matrix.onrender.com/api/skills/JohnDev19/ocean">
+    <img src="https://github-skill-matrix.onrender.com/api/skills/JohnDev19/ocean" alt="Ocean Theme" width="300">
+  </a>
+
+- **Hacker Theme**  
+  <a href="https://github-skill-matrix.onrender.com/api/skills/JohnDev19/hacker">
+    <img src="https://github-skill-matrix .onrender.com/api/skills/JohnDev19/hacker" alt="Hacker Theme" width="300">
+  </a>
+
+- **Twilight Theme**  
+  <a href="https://github-skill-matrix.onrender.com/api/skills/JohnDev19/twilight">
+    <img src="https://github-skill-matrix.onrender.com/api/skills/JohnDev19/twilight" alt="Twilight Theme" width="300">
+  </a>
+
+- **Autumn Theme**  
+  <a href="https://github-skill-matrix.onrender.com/api/skills/JohnDev19/autumn">
+    <img src="https://github-skill-matrix.onrender.com/api/skills/JohnDev19/autumn" alt="Autumn Theme" width="300">
+  </a>
+
+- **Ice Theme**  
+  <a href="https://github-skill-matrix.onrender.com/api/skills/JohnDev19/ice">
+    <img src="https://github-skill-matrix.onrender.com/api/skills/JohnDev19/ice" alt="Ice Theme" width="300">
+  </a>
+
+- **Galaxy Theme**  
+  <a href="https://github-skill-matrix.onrender.com/api/skills/JohnDev19/galaxy">
+    <img src="https://github-skill-matrix.onrender.com/api/skills/JohnDev19/galaxy" alt="Galaxy Theme" width="300">
+  </a>
+
+- **Monochrome Theme**  
+  <a href="https://github-skill-matrix.onrender.com/api/skills/JohnDev19/monochrome">
+    <img src="https://github-skill-matrix.onrender.com/api/skills/JohnDev19/monochrome" alt="Monochrome Theme" width="300">
+  </a>
+
 ---
 
 ## Usage
